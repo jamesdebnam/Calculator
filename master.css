@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(43, 58, 68);
+  color: beige;
+  text-align: center;
+}
+.calculator {
+  margin: 0 auto;
+  width: 620px;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px;
+  grid-template-rows: 80px 80px 80px 80px;
+  gap: 5px 5px;
+}
+
+.output {
+  background-color: beige;
+  height: 50px;
+  width: 620px;
+}
+
+button {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+img {
+  position: relative;
+  left: -2px;
+}
