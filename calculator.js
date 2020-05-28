@@ -36,6 +36,15 @@ input.addEventListener("click", (e) => {
   }
 });
 
+//This just maps the buttons to keyboard presses
+document.addEventListener("keydown", (e) => {
+  if (/[0-9+-/*]/.test(e.key) && /[^F]/.test(e.key)) {
+    output.innerText += e.key;
+  } else if (e.key === "Backspace") {
+    output.innerText = output.innerText.slice(0, output.innerText.length - 1);
+  } else if (e.key === "=") calculate(output.innerText);
+});
+
 //The function calls plus, then minus, etc. in order - the first one which catches
 //an operator will call through the other functions and break out.
 //I know this is a bit messy... But it was the most elegant way I could think to do it
