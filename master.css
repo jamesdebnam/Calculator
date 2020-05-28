@@ -25,6 +25,7 @@ body {
   height: 50px;
   box-sizing: border-box;
   width: 620px;
+  overflow-x: auto;
 }
 
 button {
