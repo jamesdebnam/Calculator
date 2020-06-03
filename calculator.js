@@ -42,7 +42,15 @@ document.addEventListener("keydown", (e) => {
     output.innerText += e.key;
   } else if (e.key === "Backspace") {
     output.innerText = output.innerText.slice(0, output.innerText.length - 1);
-  } else if (e.key === "=") calculate(output.innerText);
+  } else if (e.key === "=") {
+    calculate(output.innerText);
+  } else if (e.key === "Enter") {
+    if (calculated) {
+      output.innerText = "";
+      calculated = false;
+    }
+    calculate(output.innerText);
+  }
 });
 
 //The function calls plus, then minus, etc. in order - the first one which catches
